@@ -1,5 +1,4 @@
 /* === JS/CONFIG/CONFIG.JS === */
-/* === JS/CONFIG/CONFIG.JS === */
 window.AppConfig = {
     version: '1.0.0',
     debug: true,

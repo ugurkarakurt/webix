@@ -1,13 +1,13 @@
-/* === JS/COMPONENTS/FOOTER.JS === */
+/* === DÜZELTILMIŞ JS/COMPONENTS/FOOTER.JS === */
 window.FooterComponent = {
     config: function () {
         return {
             view: "toolbar",
             height: 80,
-            css: "webix_dark",
+            css: "footer-container",
             cols: [{
                 template: `
-                    <div style="padding: 20px; color: white;">
+                    <div style="padding: 20px; color: white; background: #2c3e50;">
                         <div class="footer-content">
                             <div class="footer-section">
                                 <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px; cursor: pointer;" onclick="App.navigate('/')">🛍️ TechStore</div>
@@ -20,7 +20,7 @@ window.FooterComponent = {
                                     <a href="javascript:void(0)" onclick="App.navigate('/products')">Ürünler</a>
                                     <a href="javascript:void(0)" onclick="App.navigate('/about')">Hakkımızda</a>
                                 </div>
-                                <div style="font-size: 12px; opacity: 0.7;">© 2025 TechStore. Tüm hakları saklıdır.</div>
+                                <div style="font-size: 12px; opacity: 0.7; margin-top: 10px;">© 2025 TechStore. Tüm hakları saklıdır.</div>
                             </div>
                             
                             <div class="footer-section" style="text-align: right;">

@@ -5,22 +5,20 @@
     <meta charset="utf-8">
     <title>TechStore - Redirecting...</title>
     <script type="text/javascript">
-        // SPA için 404 redirect - hemen index.html'e yönlendir
+        // Webix SPA için 404 redirect - sadece index.html'e yönlendir
         var l = window.location;
-        var path = l.pathname;
 
-        // Ana URL'e path'i parametre olarak ekle
+        // Webix router'ın handle etmesi için basit redirect
         window.location.replace(
-            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-            '/?redirect=' + encodeURIComponent(path)
+            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/'
         );
     </script>
 </head>
 
 <body>
     <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
-        <h2>🔄 Redirecting...</h2>
-        <p>Please wait while we redirect you to the correct page.</p>
+        <h2>🔄 TechStore'a Yönlendiriliyorsunuz...</h2>
+        <p>Webix Router devrede, lütfen bekleyiniz.</p>
     </div>
 </body>
 

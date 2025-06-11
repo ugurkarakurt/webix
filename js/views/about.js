@@ -1,8 +1,9 @@
-/* === JS/VIEWS/ABOUT.JS === */
+/* === DÜZELTILMIŞ JS/VIEWS/ABOUT.JS === */
 window.AboutView = {
     config: function () {
         return {
             id: "about_view",
+            view: "template",
             template: `
                 <div class="page-wrapper">
                     <div class="about-container">
@@ -51,7 +52,9 @@ window.AboutView = {
                         </div>
                     </div>
                 </div>
-            `
+            `,
+            scroll: "auto",
+            borderless: true
         };
     }
 };

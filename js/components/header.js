@@ -1,40 +1,78 @@
-/* === JS/COMPONENTS/HEADER.JS === */
 window.HeaderComponent = {
     config: function () {
+        const currentLang = localStorage.getItem('lang') || 'TR';
+
         return {
             view: "toolbar",
             height: 70,
-            css: "webix_dark",
+            css: "header-container",
             cols: [{
                 template: `
-                    <div style="display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 20px;">
-                        <div style="display: flex; align-items: center;">
-                            <div style="font-size: 28px; font-weight: bold; color: white; margin-right: 50px; cursor: pointer;" onclick="App.navigate('/')">
-                                🛍️ TechStore
+                    <div class="header-wrapper">
+                        <div class="header-left">
+                            <div class="header-logo" onclick="App.navigate('/')">
+                                LUXURY AUDIO
                             </div>
-                            <nav>
-                                <button class="nav-button" data-page="home" onclick="App.navigate('/')">Ana Sayfa</button>
-                                <button class="nav-button" data-page="products" onclick="App.navigate('/products')">Ürünler</button>
-                                <button class="nav-button" data-page="about" onclick="App.navigate('/about')">Hakkımızda</button>
-                            </nav>
                         </div>
-                        <div style="color: white; font-size: 14px;">
-                            v${AppConfig.version}
+                        <nav class="header-nav">
+                            <button class="nav-btn nav-btn-active" data-page="home" onclick="App.navigate('/')">Ana Sayfa</button>
+                            <button class="nav-btn" data-page="products" onclick="App.navigate('/products')">Ürünler</button>
+                            <button class="nav-btn" data-page="about" onclick="App.navigate('/about')">Hakkımızda</button>
+                        </nav>
+                        <div class="header-language">
+                            <select id="language-select" onchange="HeaderComponent.changeLanguage(this.value)">
+                                <option value="TR" ${currentLang === 'TR' ? 'selected' : ''}>TR</option>
+                                <option value="EN" ${currentLang === 'EN' ? 'selected' : ''}>EN</option>
+                            </select>
                         </div>
                     </div>
                 `,
-                borderless: true
+                borderless: true,
+                on: {
+                    onAfterRender: function () {
+                        // İlk render'da hemen arka planı ayarla
+                        HeaderComponent.updateBackground();
+                    }
+                }
             }]
         };
     },
 
     updateActiveButton: function (currentPage) {
-        const buttons = document.querySelectorAll('.nav-button');
-        buttons.forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.getAttribute('data-page') === currentPage) {
-                btn.classList.add('active');
+        // Delay'i azalttık - daha hızlı tepki
+        setTimeout(() => {
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('nav-btn-active');
+                if (btn.getAttribute('data-page') === currentPage) {
+                    btn.classList.add('nav-btn-active');
+                }
+            });
+        }, 50);
+    },
+
+    // Optimize edilmiş background update
+    updateBackground: function () {
+        // İki farklı timing ile kontrol - daha stabil
+        this._updateBg();
+        setTimeout(() => this._updateBg(), 10);
+    },
+
+    _updateBg: function () {
+        const wrapper = document.querySelector(".header-wrapper");
+        if (wrapper) {
+            const isHomePage = window.location.pathname === "/" || window.location.pathname === "";
+
+            if (isHomePage) {
+                wrapper.classList.remove("header-bg");
+            } else {
+                wrapper.classList.add("header-bg");
             }
-        });
+        }
+    },
+
+    changeLanguage: function (lang) {
+        localStorage.setItem('lang', lang);
+        location.reload();
     }
 };
