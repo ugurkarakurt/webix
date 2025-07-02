@@ -1,0 +1,78 @@
+{
+    "common": {
+        "home": "Ana Sayfa",
+        "products": "Ürünler",
+        "about": "Hakkımızda",
+        "contact": "İletişim",
+        "brand": "Marka",
+        "loading": "Yükleniyor...",
+        "error": "Hata oluştu",
+        "addToCart": "Sepete Ekle",
+        "cart": "Sepet",
+        "login": "Giriş Yap",
+        "logout": "Çıkış Yap",
+        "search": "Ara",
+        "currency": "₺"
+    },
+    "navigation": {
+        "menu": "Menü",
+        "close": "Kapat",
+        "toggleLanguage": "Dil Değiştir"
+    },
+    "pages": {
+        "home": {
+            "title": "E-Ticaret Mağazası",
+            "welcome": "Modern alışveriş deneyimine hoş geldiniz",
+            "featuredProducts": "Öne Çıkan Ürünler",
+            "shopNow": "Hemen Alışveriş Yap"
+        },
+        "products": {
+            "title": "Ürünler",
+            "noProducts": "Ürün bulunamadı",
+            "addToCart": "Sepete Ekle",
+            "viewDetails": "Detayları Gör",
+            "filterBy": "Filtrele",
+            "sortBy": "Sırala"
+        },
+        "about": {
+            "title": "Hakkımızda",
+            "description": "Modern e-ticaret platformumuza hoş geldiniz.",
+            "mission": "Misyonumuz",
+            "vision": "Vizyonumuz"
+        },
+        "contact": {
+            "title": "İletişim",
+            "getInTouch": "İletişime Geçin",
+            "sendMessage": "Mesaj Gönder",
+            "name": "Ad Soyad",
+            "email": "E-posta",
+            "message": "Mesaj",
+            "address": "Adres",
+            "phone": "Telefon"
+        },
+        "brand": {
+            "title": "Markamız",
+            "story": "Hikayemiz",
+            "values": "Değerlerimiz",
+            "innovation": "İnovasyon",
+            "quality": "Kalite",
+            "trust": "Güven"
+        }
+    },
+    "cart": {
+        "title": "Sepetim",
+        "empty": "Sepetiniz boş",
+        "total": "Toplam",
+        "checkout": "Ödeme Yap",
+        "remove": "Kaldır",
+        "quantity": "Adet"
+    },
+    "auth": {
+        "login": "Giriş Yap",
+        "register": "Kayıt Ol",
+        "email": "E-posta",
+        "password": "Şifre",
+        "forgotPassword": "Şifremi Unuttum",
+        "welcomeBack": "Tekrar Hoş Geldiniz"
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "common": {
+        "home": "Home",
+        "products": "Products",
+        "about": "About",
+        "contact": "Contact",
+        "brand": "Brand",
+        "loading": "Loading...",
+        "error": "An error occurred",
+        "addToCart": "Add to Cart",
+        "cart": "Cart",
+        "login": "Login",
+        "logout": "Logout",
+        "search": "Search",
+        "currency": "$"
+    },
+    "navigation": {
+        "menu": "Menu",
+        "close": "Close",
+        "toggleLanguage": "Switch Language"
+    },
+    "pages": {
+        "home": {
+            "title": "E-Commerce Store",
+            "welcome": "Welcome to modern shopping experience",
+            "featuredProducts": "Featured Products",
+            "shopNow": "Shop Now"
+        },
+        "products": {
+            "title": "Products",
+            "noProducts": "No products found",
+            "addToCart": "Add to Cart",
+            "viewDetails": "View Details",
+            "filterBy": "Filter by",
+            "sortBy": "Sort by"
+        },
+        "about": {
+            "title": "About Us",
+            "description": "Welcome to our modern e-commerce platform.",
+            "mission": "Our Mission",
+            "vision": "Our Vision"
+        },
+        "contact": {
+            "title": "Contact",
+            "getInTouch": "Get in Touch",
+            "sendMessage": "Send Message",
+            "name": "Full Name",
+            "email": "Email",
+            "message": "Message",
+            "address": "Address",
+            "phone": "Phone"
+        },
+        "brand": {
+            "title": "Our Brand",
+            "story": "Our Story",
+            "values": "Our Values",
+            "innovation": "Innovation",
+            "quality": "Quality",
+            "trust": "Trust"
+        }
+    },
+    "cart": {
+        "title": "My Cart",
+        "empty": "Your cart is empty",
+        "total": "Total",
+        "checkout": "Checkout",
+        "remove": "Remove",
+        "quantity": "Quantity"
+    },
+    "auth": {
+        "login": "Login",
+        "register": "Register",
+        "email": "Email",
+        "password": "Password",
+        "forgotPassword": "Forgot Password",
+        "welcomeBack": "Welcome Back"
+    }
+}
